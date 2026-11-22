@@ -223,7 +223,7 @@
 <script>
     const ar=document.querySelector('[data-l=ar]'),en=document.querySelector('[data-l=en]'),b1=document.getElementById("bar"),b2=document.getElementById("ben");
     function set(l){const a=l==="ar";ar.hidden=!a;en.hidden=a;b1.setAttribute("aria-pressed",a);b2.setAttribute("aria-pressed",!a);document.documentElement.lang=l;document.documentElement.dir=a?"rtl":"ltr"}
-    b1.onclick=()=>set("ar");b2.onclick=()=>set("en");if((navigator.language||"").toLowerCase().indexOf("ar")!==0&&location.hash!=="#ar")set("en");
+    b1.onclick=()=>set("ar");b2.onclick=()=>set("en");if(location.hash==="#en")set("en");
 </script>
 </body>
 </html>
